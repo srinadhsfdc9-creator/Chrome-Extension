@@ -181,11 +181,11 @@ const STEALTH_CSS = `
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    color: rgba(167, 139, 250, 0.6);
+    color: rgba(96, 165, 250, 0.6);
   }
 
   #copilot-stealth-widget:hover #copilot-widget-header {
-    color: rgba(167, 139, 250, 0.95);
+    color: rgba(96, 165, 250, 0.95);
   }
 
   .copilot-header-controls {
@@ -220,7 +220,7 @@ const STEALTH_CSS = `
   .copilot-live-preview {
     font-style: italic;
     color: rgba(148, 163, 184, 0.5);
-    border-left: 2px solid rgba(167, 139, 250, 0.3);
+    border-left: 2px solid rgba(59, 130, 246, 0.3);
     padding-left: 8px;
     margin-bottom: 8px;
     font-size: 12px;
@@ -249,15 +249,15 @@ const STEALTH_CSS = `
   }
 
   .copilot-tab-btn.active {
-    color: rgba(217, 70, 239, 0.8);
-    background-color: rgba(217, 70, 239, 0.08);
+    color: rgba(59, 130, 246, 0.8);
+    background-color: rgba(59, 130, 246, 0.08);
   }
 
   #copilot-stealth-widget:hover .copilot-tab-btn {
     color: rgba(148, 163, 184, 0.7);
   }
   #copilot-stealth-widget:hover .copilot-tab-btn.active {
-    color: rgba(217, 70, 239, 1);
+    color: rgba(59, 130, 246, 1);
   }
 
   .copilot-tab-content {
@@ -271,14 +271,14 @@ const STEALTH_CSS = `
 
   /* Styling for fainted highlights in injected widget */
   .copilot-tab-content strong {
-    color: rgba(244, 114, 182, 0.7);
-    background-color: rgba(244, 114, 182, 0.05);
+    color: rgba(96, 165, 250, 0.7);
+    background-color: rgba(96, 165, 250, 0.05);
     padding: 1px 3px;
     border-radius: 3px;
   }
   #copilot-stealth-widget:hover .copilot-tab-content strong {
-    color: rgba(244, 114, 182, 1);
-    background-color: rgba(244, 114, 182, 0.1);
+    color: rgba(96, 165, 250, 1);
+    background-color: rgba(96, 165, 250, 0.1);
   }
 
   .copilot-config-tag {
@@ -309,11 +309,11 @@ const STEALTH_CSS = `
     content: '✦';
     position: absolute;
     left: 0;
-    color: rgba(139, 92, 246, 0.5);
+    color: rgba(59, 130, 246, 0.5);
     font-size: 9px;
   }
   #copilot-stealth-widget:hover .copilot-bullets li::before {
-    color: rgba(139, 92, 246, 0.9);
+    color: rgba(59, 130, 246, 0.9);
   }
 
   .copilot-code-block {
@@ -351,7 +351,7 @@ const STEALTH_CSS = `
 
   .copilot-opacity-slider {
     flex: 1;
-    accent-color: #d946ef;
+    accent-color: #3b82f6;
     cursor: pointer;
     height: 3px;
     opacity: 0.5;
@@ -366,12 +366,12 @@ const STEALTH_CSS = `
     height: 32px;
     border-radius: 50%;
     overflow: hidden;
-    background-color: rgba(167, 139, 250, var(--copilot-opacity));
-    border-color: rgba(167, 139, 250, 0.3);
+    background-color: rgba(59, 130, 246, var(--copilot-opacity));
+    border-color: rgba(59, 130, 246, 0.3);
   }
   #copilot-stealth-widget.minimized:hover {
-    background-color: rgba(167, 139, 250, var(--copilot-hover-opacity));
-    border-color: rgba(167, 139, 250, 0.8);
+    background-color: rgba(59, 130, 246, var(--copilot-hover-opacity));
+    border-color: rgba(59, 130, 246, 0.8);
   }
   #copilot-stealth-widget.minimized #copilot-widget-header {
     border-bottom: none;
@@ -428,7 +428,7 @@ function injectStealthOverlay() {
       </div>
       <div id="stealth-usecase-tab" class="copilot-tab-content">
         <div id="stealth-usecase-box" style="margin-bottom: 10px;">N/A</div>
-        <div id="stealth-script-box" style="font-style: italic; color: rgba(148, 163, 184, 0.6); padding-left: 6px; border-left: 2px solid rgba(217, 70, 239, 0.4);">N/A</div>
+        <div id="stealth-script-box" style="font-style: italic; color: rgba(148, 163, 184, 0.6); padding-left: 6px; border-left: 2px solid rgba(59, 130, 246, 0.4);">N/A</div>
       </div>
     </div>
     <div class="copilot-slider-container">
@@ -597,7 +597,7 @@ function renderStealthSolution(solution, tech) {
   // Trigger brief highlight animations on headers
   const widget = document.getElementById('copilot-stealth-widget');
   if (widget) {
-    widget.style.borderColor = 'rgba(217, 70, 239, 0.4)';
+    widget.style.borderColor = 'rgba(59, 130, 246, 0.4)';
     setTimeout(() => {
       widget.style.borderColor = 'rgba(255, 255, 255, 0.06)';
     }, 1500);
