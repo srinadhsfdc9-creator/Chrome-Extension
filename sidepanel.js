@@ -723,6 +723,20 @@ function renderSolution(solution, tech) {
   
   // Default to Code tab for immediate viewing
   switchTab('code-tab');
+
+  // Forward solution to the active tab's stealth floating overlay
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    if (tabs && tabs[0]) {
+      chrome.tabs.sendMessage(tabs[0].id, {
+        action: 'updateStealthSolution',
+        solution: solution,
+        tech: tech
+      }).catch(err => {
+        // Suppress message errors if tabs are system pages or the content script is not injected
+        console.log("[Stealth Overlay] Could not send solution to tab:", err.message);
+      });
+    }
+  });
 }
 
 // Subtitle Sync Button Click Listener
