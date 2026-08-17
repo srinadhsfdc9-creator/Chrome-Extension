@@ -4,6 +4,14 @@ const CAPTION_SELECTORS = [
   '.bhZ3Mc', // Google Meet sub-container
   'div[jsname="YS7M5c"]', // Google Meet active speaker caption text
   'div[jscontroller="D1mJTe"]', // Google Meet caption block
+  'div[class*="caption" i]', // Any class containing "caption" (Teams/Zoom dynamic classes)
+  'div[class*="transcript" i]', // Any class containing "transcript" (Teams transcript panel)
+  'div[class*="meeting-captions" i]',
+  'div[class*="live-captions" i]',
+  'div[data-tid*="caption" i]',
+  'div[data-tid*="transcript" i]',
+  'div[aria-label*="caption" i]',
+  'div[aria-label*="transcript" i]',
   '.caption-row', // MS Teams caption row
   'div[data-tid="captions-text"]', // MS Teams text container
   '.meeting-control-caption-text', // Zoom caption text container
